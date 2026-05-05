@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capacities Framework</title>
+  <style>
+    :root {
+      --bg: #f7f6f2;
+      --fg: #1a1a1a;
+      --muted: #222;
+      --s1: #6b4c2e; --s2: #2a5a3e; --s3: #4a3f6b; --s4: #8b2d3b; --s5: #1e4d6b;
+      --font-h: Georgia, 'Times New Roman', serif;
+      --font-b: system-ui, -apple-system, Segoe UI, sans-serif;
+    }
+
+    /* FORCED BOLD AND MASSIVE SCALE */
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+      font-weight: 900 !important; 
+    }
+
+    body {
+      font-family: var(--font-b);
+      background: var(--bg);
+      color: var(--fg);
+      overflow-x: hidden;
+      line-height: 1.3;
+    }
+
+    .stack {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 40vh 2rem 90vh; /* Deep padding to isolate items */
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-family: var(--font-h);
+      font-size: 5rem;
+      text-align: center;
+      margin-bottom: 60vh; /* Space after short header */
+      letter-spacing: -0.03em;
+    }
+
+    .source-label {
+      display: block;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      padding: 1.2rem 2.5rem;
+      color: white;
+      text-align: center;
+      margin: 30vh auto;
+      width: fit-content;
+      border-radius: 12px;
+    }
+
+    .major-head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      margin-bottom: 50vh;
+    }
+
+    .major-num {
+      font-size: 4rem;
+      color: white;
+      width: 7rem;
+      height: 7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .major-title { font-size: 3.8rem; text-transform: uppercase; text-align: center; }
+
+    .card, .sub {
+      background: white;
+      padding: 5rem;
+      border-radius: 30px;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+      margin-bottom: 70vh; /* Forces only one item to be in the "active" zone */
+      border-left: 25px solid;
+      width: 100%;
+    }
+
+    .card h3, .sub h4 { font-size: 3.5rem; margin-bottom: 2rem; }
+    .card p, .sub p { font-size: 2.2rem; color: var(--muted); }
+
+    /* COLOR THEMES */
+    .c1 .source-label, .c1 .major-num { background: var(--s1); } .c1 .card, .c1 .sub { border-left-color: var(--s1); }
+    .c2 .major-num { background: var(--s2); } .c2 .card, .c2 .sub { border-left-color: var(--s2); }
+    .c3 .major-num { background: var(--s3); } .c3 .card, .c3 .sub { border-left-color: var(--s3); }
+    .c4 .major-num { background: var(--s4); } .c4 .card, .c4 .sub { border-left-color: var(--s4); }
+    .c5 .source-label, .c5 .major-num { background: var(--s5); } .c5 .card, .c5 .sub { border-left-color: var(--s5); }
+
+    /* SLOWER SMOOTH TRANSITIONS */
+    .phase {
+      opacity: 0;
+      filter: blur(25px);
+      transform: translateY(120px) scale(0.9);
+      transition: 
+        opacity 1.5s cubic-bezier(0.25, 1, 0.5, 1),
+        transform 1.5s cubic-bezier(0.25, 1, 0.5, 1),
+        filter 1.5s ease;
+      pointer-events: none;
+      will-change: transform, opacity, filter;
+    }
+
+    /* ACTIVE SPOTLIGHT */
+    .phase.active {
+      opacity: 1;
+      filter: blur(0px);
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    /* PHASED OUT (ABOVE) */
+    .phase.phased-out {
+      opacity: 0;
+      filter: blur(25px);
+      transform: translateY(-120px) scale(0.9);
+    }
+  </style>
+</head>
+<body>
+  <div class="stack">
+    <h1 class="phase">Eight Capacities</h1>
+
+    <!-- PART A -->
+    <div class="c1">
+      <span class="source-label phase">Visual Framework</span>
+      <div class="major-head phase">
+        <span class="major-num">I</span>
+        <h2 class="major-title">Cognitive Principles</h2>
+      </div>
+      <div class="card phase"><h3>Sense-Making</h3><p>Deliberate skepticism of your own reasoning to avoid bias or fallacies.</p></div>
+      <div class="card phase"><h3>Objectivity</h3><p>Pre-emptively identify potential falsifiers before committing to conclusions.</p></div>
+      <div class="card phase"><h3>Fairness</h3><p>Use objective evaluation; avoid motivated reasoning.</p></div>
+      <div class="card phase"><h3>Accuracy over Ego</h3><p>Prioritize being correct over being "right."</p></div>
+    </div>
+
+    <div class="c2">
+      <div class="major-head phase">
+        <span class="major-num">II</span>
+        <h2 class="major-title">Thinking Methods</h2>
+      </div>
+      <div class="card phase"><h3>Steel-man</h3><p>Construct the opponent's argument in its strongest form to test survival.</p></div>
+      <div class="card phase"><h3>Confidence Calibration</h3><p>Proportion certainty to quality of evidence.</p></div>
+    </div>
+
+    <div class="c3">
+      <div class="major-head phase">
+        <span class="major-num">III</span>
+        <h2 class="major-title">Decentering Self</h2>
+      </div>
+      <div class="card phase"><h3>Self-Confidence</h3><p>Observe thoughts/emotions as transient phenomena or programming.</p></div>
+      <div class="sub phase"><h4>Stable Self-Worth</h4><p>Rooted in moral character, integrity, and volition.</p></div>
+      <div class="sub phase"><h4>Dependent Self-Worth</h4><p>Dependent on external validation and social achievements.</p></div>
+    </div>
+
+    <div class="c4">
+      <div class="major-head phase">
+        <span class="major-num">IV</span>
+        <h2 class="major-title">Stress & Regulation</h2>
+      </div>
+      <div class="card phase"><h3>Distress</h3><p>Reduce triggers, step back, and recover.</p></div>
+      <div class="card phase"><h3>Optimal Stress</h3><p>Use moderate stress in a productive way (Goldilocks Zone).</p></div>
+      <div class="sub phase"><h4>Action & Attribution</h4><p>Build competence through practice and attribute outcomes to skill.</p></div>
+    </div>
+
+    <div class="c5">
+      <span class="source-label phase">Formal Capacities</span>
+      <div class="major-head phase">
+        <span class="major-num">V</span>
+        <h2 class="major-title">Core Definitions</h2>
+      </div>
+      <div class="card phase"><h3>Integrity</h3><p>Consistent regulation of behavior that aligns actions with principles.</p></div>
+      <div class="card phase"><h3>Sense-making</h3><p>Integrating metacognitive signals to revise preconceptions.</p></div>
+      <div class="card phase"><h3>Objectivity</h3><p>Mitigates motivated reasoning through consistent self-critique.</p></div>
+      <div class="card phase"><h3>Fairness</h3><p>A proportional relationship between intent and consequence.</p></div>
+      <div class="card phase"><h3>Intentionality</h3><p>Allocate effort according to future importance rather than sunk costs.</p></div>
+      <div class="card phase"><h3>Perseverance</h3><p>Long-term persistence utilized to override fear-driven avoidance.</p></div>
+    </div>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          entry.target.classList.remove('phased-out');
+        } else {
+          entry.target.classList.remove('active');
+          // If the element has moved above the spotlight window, phase it out
+          if (entry.boundingClientRect.top < window.innerHeight / 2) {
+            entry.target.classList.add('phased-out');
+          } else {
+            entry.target.classList.remove('phased-out');
+          }
+        }
+      });
+    }, { 
+      rootMargin: '-45% 0% -45% 0%', // Extremely tight window for isolation
+      threshold: 0 
+    });
+
+    document.querySelectorAll('.phase').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
