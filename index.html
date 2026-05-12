@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Framework</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    :root{
+        --bg:#0a0a0a;
+        --panel:#121212;
+        --text:#f5f5f5;
+        --muted:#9d9d9d;
+        --line:#232323;
+    }
+
+    body{
+        font-family:'Inter',sans-serif;
+        background:var(--bg);
+        color:var(--text);
+        line-height:1.7;
+        overflow-x:hidden;
+    }
+
+    .noise{
+        position:fixed;
+        inset:0;
+        opacity:.03;
+        pointer-events:none;
+        background-image:
+            radial-gradient(circle at 20% 20%, white 1px, transparent 1px),
+            radial-gradient(circle at 80% 80%, white 1px, transparent 1px);
+        background-size:50px 50px;
+    }
+
+    header{
+        min-height:70vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        padding:2rem;
+        border-bottom:1px solid var(--line);
+    }
+
+    .hero{
+        max-width:900px;
+    }
+
+    .eyebrow{
+        color:var(--muted);
+        letter-spacing:4px;
+        text-transform:uppercase;
+        font-size:.8rem;
+        margin-bottom:1rem;
+    }
+
+    h1{
+        font-size:clamp(3rem,8vw,7rem);
+        font-weight:700;
+        letter-spacing:-4px;
+        line-height:1;
+    }
+
+    main{
+        max-width:1100px;
+        margin:auto;
+        padding:6rem 2rem;
+    }
+
+    section{
+        margin-bottom:5rem;
+    }
+
+    .section-title{
+        font-size:2rem;
+        margin-bottom:2rem;
+        letter-spacing:-1px;
+    }
+
+    .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+        gap:1.2rem;
+    }
+
+    .card{
+        background:var(--panel);
+        border:1px solid var(--line);
+        padding:1.5rem;
+        transition:.3s ease;
+        position:relative;
+        overflow:hidden;
+    }
+
+    .card::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:linear-gradient(135deg,rgba(255,255,255,.05),transparent);
+        opacity:0;
+        transition:.3s ease;
+    }
+
+    .card:hover::before{
+        opacity:1;
+    }
+
+    .card:hover{
+        transform:translateY(-4px);
+        border-color:#3a3a3a;
+    }
+
+    .card h3{
+        margin-bottom:.8rem;
+        font-size:1rem;
+        font-weight:600;
+    }
+
+    .card p{
+        color:var(--muted);
+        font-size:.95rem;
+    }
+
+    footer{
+        border-top:1px solid var(--line);
+        padding:3rem 2rem;
+        text-align:center;
+        color:var(--muted);
+        font-size:.9rem;
+    }
+
+    @media(max-width:700px){
+        h1{
+            letter-spacing:-2px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="noise"></div>
+
+<header>
+    <div class="hero">
+        <div class="eyebrow">Framework</div>
+
+        <h1>
+            Clear Thinking.<br>
+            Stable Action.
+        </h1>
+    </div>
+</header>
+
+<main>
+
+<section>
+    <h2 class="section-title">Core Principles</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Self-Reflection</h3>
+            <p>
+                Deliberate question your own reasoning to avoid biases or logical fallacies.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Critical Thinking</h3>
+            <p>
+                Pre-emptively spot potential falsifiers (ways conclusions could be proven wrong)
+                before committing to these conclusions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Fairness</h3>
+            <p>
+                Proportionately balances the degree of empathy in someone's intent with accountability
+                for the actual consequences of their actions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Objectivity</h3>
+            <p>
+                Prioritize being correct over winning an argument, by applying consistent standards during self-critique.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Steel-man</h3>
+            <p>
+                Construct the opponent's argument in its strongest committed form and then test whether it survives its own logic.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Confidence Calibration</h3>
+            <p>
+                Proportion certainty to quality of evidence.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Observer Mindset</h3>
+            <p>
+                Observe thoughts/emotions as transient phenomena or subconscious programming.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Stable Self-Worth</h3>
+            <p>
+                Rooted in moral character, integrity, and volition; It is not dependent on social recognition or defensive self-sufficiency
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Distress</h3>
+            <p>
+                Step back to reduce triggers and recover quickly.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Optimal Stress</h3>
+            <p>
+                Use moderate pressure (within the goldilocks zone) for a productive performance.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Grounded Self-efficacy</h3>
+            <p>
+                Realistically assess your abilities and then correctly credit successes to the appropriate causes.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Integrity</h3>
+            <p>
+                Consistent regulation of behavior that aligns actions with principles.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Sense-making</h3>
+            <p>
+                Integrating metacognitive signals to revise preconceptions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Internal Locus of control</h3>
+            <p>
+                Allocates effort to what can be influenced moving forward instead of dwelling in sunk costs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Perseverance</h3>
+            <p>
+                Sustain long-term effort to push through fear-driven avoidance.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<footer>
+    Framework © 2026
+</footer>
+
+</body>
+</html>
