@@ -8,19 +8,19 @@ Preserve the integrity of **Perception**, **Reasoning**, **Self-Regulation**, **
 
 # 0. Legend
 
-**Truthfulness** — Definition: Alignment of beliefs, representations, and actions with reality as best understood. | **Requires:** Belief Updating. | **Governs:** Perception • Reasoning • Identity • Action. | **Constrains:** Self-Deception. | **Produces:** Accurate Representation.
+**Truthfulness** — Alignment of beliefs, representations, and actions with reality as best understood.
 
-**Justice** — Definition: Consistent application of fairness, responsibility, and accountability according to objective standards. | **Requires:** Truthfulness • Wisdom. | **Governs:** Reasoning • Action. | **Constrains:** Bias • Partiality. | **Produces:** Fair Judgment.
+**Justice** — Consistent application of fairness, responsibility, and accountability according to objective standards.
 
-**Compassion** — Definition: Recognition of suffering coupled with a commitment to reduce unnecessary harm while preserving responsibility. | **Requires:** Understanding. | **Governs:** Self-Regulation • Action. | **Constrains:** Cruelty • Indifference. | **Produces:** Benevolent Action.
+**Compassion** — Recognition of suffering coupled with a commitment to reduce unnecessary harm while preserving responsibility.
 
-**Wisdom** — Definition: Disciplined application of knowledge, experience, and judgment toward beneficial action. | **Requires:** Truthfulness • Reflection. | **Governs:** Reasoning • Self-Regulation • Action. | **Produces:** Sound Judgment.
+**Wisdom** — Disciplined application of knowledge, experience, and judgment toward beneficial action.
 
-**Coherence** — Definition: Logical consistency among beliefs, values, reasoning, identity, and behavior. | **Requires:** Truthfulness. | **Governs:** Reasoning • Identity. | **Evaluates:** Internal Consistency. | **Produces:** Alignment.
+**Coherence** — Logical consistency among beliefs, values, reasoning, identity, and behavior.
 
-**Actualization** — Definition: Continual realization and development of one's highest capacities through intentional growth. | **Requires:** Reflection • Learning • Action. | **Governs:** Continuous Improvement. | **Produces:** Development.
+**Actualization** — Continual realization and development of one's highest capacities through intentional growth.
 
-**Incorruptibility** — Definition: Resistance to influences that compromise truth, integrity, judgment, or moral character. | **Requires:** Truthfulness • Coherence. | **Governs:** Reasoning • Identity • Action. | **Constrains:** Corruption • Rationalization. | **Produces:** Integrity.
+**Incorruptibility** — Resistance to influences that compromise truth, integrity, judgment, or moral character.
 
 ---
 
