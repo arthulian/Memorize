@@ -1,8 +1,8 @@
 # Specification Framework
 
-## Purpose
+## Primary Objective
 
-Provide a coherent personal operating framework for perceiving reality accurately, reasoning soundly, regulating oneself effectively, maintaining a principled identity, and acting wisely through continuous learning and moral integrity.
+Preserve the integrity of **Perception**, **Reasoning**, **Self-Regulation**, **Identity**, and **Action** under conditions of **Uncertainty**, **Emotional Intensity**, **Cognitive Load**, **Time Constraints**, and **Consequences**.
 
 ---
 
